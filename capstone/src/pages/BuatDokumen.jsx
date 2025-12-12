@@ -1,4 +1,6 @@
 import { useState } from "react";
+import FormBAPB from "../components/FormBAPB";
+import FormBAPP from "../components/FormBAPP";
 
 export default function BuatDokumen() {
   const [active, setActive] = useState("bapb");
@@ -30,10 +32,11 @@ export default function BuatDokumen() {
       </div>
 
       {active === "bapb" ? (
-        <div>/** Form BAPB kamu di sini **/</div>
+        <FormBAPB />
       ) : (
-        <div>/** Form BAPP kamu di sini **/</div>
+        <FormBAPP />   // <-- Tampilkan Form BAPP di sini
       )}
+
     </div>
   );
 }
