@@ -1,16 +1,57 @@
-# React + Vite
+📘 Capstone Project – Sistem Berita Acara (BAPP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyek ini merupakan aplikasi fullstack yang terdiri dari:
 
-Currently, two official plugins are available:
+Frontend (React + Vite + Tailwind)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend (PHP Native + MySQL)
 
-## React Compiler
+API proses dokumen BAPP & BAPB
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sistem multi-role: Admin, Vendor, Gudang, Direksi
 
-## Expanding the ESLint configuration
+Sistem notifikasi & progres dokumen
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Struktur repository menggunakan model monorepo agar mudah direplikasi dan dipelajari.
+
+
+
+Cara Menjalankan Project
+1️⃣ Clone Repository
+git clone https://github.com/USERNAME/NAMA-REPO.git
+cd NAMA-REPO
+
+2️⃣ Pindahkan backend ke XAMPP
+Letakkan folder:
+backend/ → C:\xampp\htdocs\backend\
+
+3️⃣Buat Database di phpMyAdmin
+Buka browser → http://localhost/phpmyadmin
+Buat database baru:
+capstone_db
+Import file SQL jika tersedia, atau buat tabel sesuai kebutuhan.
+
+4️⃣Install dependencies
+Masuk ke folder frontend:
+cd capstone
+npm install
+
+✨ Fitur Utama
+
+Login & autentikasi berbasis role
+
+Pembuatan dokumen BAPP & BAPB
+
+Upload lampiran (PDF/Gambar)
+
+Preview dokumen sebelum submit
+
+Notifikasi status progres (modal)
+
+Dashboard role spesifik
+
+Arsip dokumen lengkap
+
+Tampilan modern (Tailwind + React)
+
+Sistem direksi/gudang/vendor terpisah

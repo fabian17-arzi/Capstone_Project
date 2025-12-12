@@ -108,6 +108,8 @@ export default function ArsipGudang() {
 
               {/* Tools */}
               <div className="flex items-center gap-4 text-gray-600">
+
+                {/* Download hanya untuk Approved */}
                 {item.status === "Approved" && (
                   <button
                     onClick={() => handleDownload(item)}
@@ -117,12 +119,16 @@ export default function ArsipGudang() {
                   </button>
                 )}
 
-                <button
-                  onClick={() => handlePreview(item)}
-                  className="hover:text-green-700"
-                >
-                  <FiEye size={20} />
-                </button>
+                {/* Preview hanya jika status BUKAN rejected */}
+                {item.status !== "Rejected" && (
+                  <button
+                    onClick={() => handlePreview(item)}
+                    className="hover:text-green-700"
+                  >
+                    <FiEye size={20} />
+                  </button>
+                )}
+
               </div>
             </div>
           ))

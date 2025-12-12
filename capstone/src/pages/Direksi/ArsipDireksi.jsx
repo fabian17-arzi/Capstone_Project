@@ -113,14 +113,19 @@ export default function ArsipDireksi() {
                   </button>
                 )}
 
-                <button
-                  onClick={() => handlePreview(item)}
-                  className="hover:text-purple-700"
-                  title="Preview PDF"
-                >
-                  <FiEye size={20} />
-                </button>
+                {/* Tampilkan PREVIEW hanya jika status bukan Rejected */}
+                {item.status !== 'Rejected' && (
+                  <button
+                    onClick={() => handlePreview(item)}
+                    className="hover:text-purple-700"
+                    title="Preview PDF"
+                  >
+                    <FiEye size={20} />
+                  </button>
+                )}
+
               </div>
+
             </div>
           ))
         )}
